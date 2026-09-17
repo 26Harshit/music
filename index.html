@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoundPulse | 100% Ad-Free Online Music</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22%238b5cf6%22><path d=%22M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z%22/></svg>">
+</head>
+<body>
+
+  <div class="app-container">
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+        </div>
+        <div>
+          <div class="brand-title">SoundPulse</div>
+          <span class="badge-no-ads">100% Ad-Free</span>
+        </div>
+      </div>
+
+      <div class="nav-group-label">Menu</div>
+      <ul class="nav-links">
+        <li class="nav-item active" data-view="discover">
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span>Discover</span>
+        </li>
+        <li class="nav-item" data-view="radio">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"/></svg>
+          <span>Live Radio</span>
+        </li>
+        <li class="nav-item" data-view="library">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <span>My Library</span>
+        </li>
+      </ul>
+
+      <div class="nav-group-label">Direct Playback</div>
+      <button class="custom-stream-btn" id="btn-open-custom-stream">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+        <span>Custom Audio URL</span>
+      </button>
+    </aside>
+
+    <!-- Main App Content -->
+    <main class="main-wrapper">
+      <!-- Top Search & Actions Header -->
+      <header class="top-header">
+        <div class="search-box">
+          <svg class="search-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="search-input" placeholder="Search songs, artists, genres, or live radio..." autocomplete="off">
+          <button class="search-clear-btn" id="search-clear-btn">&times;</button>
+        </div>
+
+        <div class="header-actions">
+          <button class="pill-btn" id="header-btn-eq" onclick="document.getElementById('btn-open-eq').click()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg>
+            <span>Equalizer</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Scrollable Views Area -->
+      <div class="content-area">
+        
+        <!-- View 1: Discover / Trending -->
+        <section class="view-section active" id="view-discover">
+          <div class="hero-banner">
+            <div class="hero-content">
+              <span class="hero-tag">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                Uncapped High Fidelity
+              </span>
+              <h1 class="hero-title">Zero Ads. Pure Sound. Unlimited Streaming.</h1>
+              <p class="hero-subtitle">Stream full tracks from independent and viral artists worldwide, explore trending charts, and tune into ad-free live radio anytime.</p>
+              <div class="hero-btn-row">
+                <button class="btn-primary" onclick="SoundPulse.player.togglePlay()">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  <span>Quick Play</span>
+                </button>
+                <button class="btn-secondary" onclick="SoundPulse.switchView('radio')">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49"/></svg>
+                  <span>Browse 40k+ Radios</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Genre Filter Pills -->
+          <div class="genre-pills-row">
+            <button class="genre-pill active" data-genre="All">All Genres</button>
+            <button class="genre-pill" data-genre="Electronic">Electronic</button>
+            <button class="genre-pill" data-genre="Hip-Hop/Rap">Hip-Hop / Rap</button>
+            <button class="genre-pill" data-genre="Pop">Pop</button>
+            <button class="genre-pill" data-genre="Rock">Rock</button>
+            <button class="genre-pill" data-genre="Lo-Fi">Lo-Fi</button>
+            <button class="genre-pill" data-genre="Ambient">Ambient</button>
+            <button class="genre-pill" data-genre="Deep House">Deep House</button>
+          </div>
+
+          <!-- Trending Grid -->
+          <div class="section-header">
+            <h2 class="section-title">Trending Now</h2>
+          </div>
+          <div class="cards-grid" id="trending-grid">
+            <!-- Rendered by JS -->
+          </div>
+        </section>
+
+        <!-- View 2: Live Radio -->
+        <section class="view-section" id="view-radio">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">Commercial-Free Global Radio</h2>
+              <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 4px;">40,000+ live stations streaming 24/7 with zero ad interruptions</p>
+            </div>
+            <div style="max-width: 260px;">
+              <input type="text" class="search-input" id="radio-search-input" placeholder="Filter radio stations..." style="padding: 8px 16px;">
+            </div>
+          </div>
+
+          <div class="cards-grid" id="radio-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+            <!-- Rendered by JS -->
+          </div>
+        </section>
+
+        <!-- View 3: Search Results -->
+        <section class="view-section" id="view-search">
+          <div class="section-header">
+            <h2 class="section-title" id="search-query-header">Search Results</h2>
+          </div>
+          <div id="search-results-container">
+            <!-- Rendered by JS -->
+          </div>
+        </section>
+
+        <!-- View 4: Library & Favorites -->
+        <section class="view-section" id="view-library">
+          <div class="section-header">
+            <h2 class="section-title">Liked Songs (<span id="fav-count-badge">0</span>)</h2>
+          </div>
+          <div class="cards-grid" id="library-favs-grid">
+            <!-- Rendered by JS -->
+          </div>
+
+          <div class="section-header" style="margin-top: 40px;">
+            <h2 class="section-title">Recently Played</h2>
+          </div>
+          <div class="cards-grid" id="library-history-grid">
+            <!-- Rendered by JS -->
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Bottom Player Bar -->
+  <footer class="bottom-player">
+    <!-- Left: Current Track Info -->
+    <div class="player-left">
+      <img id="current-artwork" class="current-artwork" src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=500&auto=format&fit=crop&q=60" alt="Artwork" title="Click to view visualizer">
+      <div class="current-info">
+        <div class="current-title" id="current-title" title="Click to view visualizer">SoundPulse Ready</div>
+        <div class="current-artist" id="current-artist">Select a song or radio station</div>
+      </div>
+      <button class="fav-btn" id="btn-fav" title="Save to Favorites">
+        <svg id="fav-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+      </button>
+    </div>
+
+    <!-- Center: Playback Controls & Progress Bar -->
+    <div class="player-center">
+      <div class="controls-row">
+        <button class="ctrl-btn" id="btn-shuffle" title="Shuffle (S)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+        </button>
+        <button class="ctrl-btn" id="btn-prev" title="Previous (P)">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="19 20 9 12 19 4 19 20"/><line x1="5" y1="19" x2="5" y2="5" stroke="currentColor" stroke-width="3"/></svg>
+        </button>
+        <button class="ctrl-btn-play" id="btn-play" title="Play/Pause (Space)">
+          <svg id="play-icon" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </button>
+        <button class="ctrl-btn" id="btn-next" title="Next (N)">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 4 15 12 5 20 5 4"/><line x1="19" y1="5" x2="19" y2="19" stroke="currentColor" stroke-width="3"/></svg>
+        </button>
+        <button class="ctrl-btn" id="btn-repeat" title="Repeat">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+        </button>
+      </div>
+
+      <div class="progress-row">
+        <span class="time-label" id="current-time">0:00</span>
+        <div class="slider-container">
+          <input type="range" class="custom-slider" id="progress-bar" min="0" max="100" step="0.1" value="0">
+        </div>
+        <span class="time-label" id="total-duration">0:00</span>
+      </div>
+    </div>
+
+    <!-- Right: Volume, Sleep Timer, EQ & Visualizer -->
+    <div class="player-right">
+      <!-- Sleep Timer -->
+      <button class="ctrl-btn" id="btn-sleep-timer" title="Sleep Timer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span class="timer-badge" id="sleep-timer-badge"></span>
+      </button>
+
+      <!-- Equalizer -->
+      <button class="ctrl-btn" id="btn-open-eq" title="10-Band Graphic Equalizer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/></svg>
+      </button>
+
+      <!-- Visualizer Mode -->
+      <button class="ctrl-btn" id="btn-open-vis" title="Full Screen Visualizer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      </button>
+
+      <!-- Queue Panel Toggle -->
+      <button class="ctrl-btn" id="btn-open-queue" title="Playing Queue">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+      </button>
+
+      <!-- Volume -->
+      <div class="volume-box">
+        <button class="ctrl-btn" id="btn-mute" title="Mute (M)">
+          <svg id="mute-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+        </button>
+        <div class="slider-container">
+          <input type="range" class="custom-slider" id="volume-slider" min="0" max="100" value="80">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Fullscreen Audio Visualizer Overlay -->
+  <div class="visualizer-overlay" id="visualizer-modal">
+    <header class="vis-header">
+      <div class="brand">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+        </div>
+        <span class="brand-title">SoundPulse Visualizer</span>
+      </div>
+
+      <div class="vis-mode-selector">
+        <button class="vis-mode-btn active" data-mode="bars">Spectrum Bars</button>
+        <button class="vis-mode-btn" data-mode="waveform">Waveform</button>
+        <button class="vis-mode-btn" data-mode="radial">Radial Ring</button>
+      </div>
+
+      <button class="vis-close-btn" id="btn-close-vis" title="Close Visualizer (Esc)">&times;</button>
+    </header>
+
+    <canvas class="vis-canvas" id="visualizer-canvas"></canvas>
+
+    <div class="vis-track-info">
+      <h2 class="vis-track-title" id="vis-track-title">SoundPulse Ready</h2>
+      <div class="vis-track-artist" id="vis-track-artist">Select a song to start</div>
+    </div>
+  </div>
+
+  <!-- 10-Band Graphic Equalizer Modal -->
+  <div class="modal-backdrop" id="eq-modal">
+    <div class="modal-window">
+      <div class="modal-header">
+        <h3 class="modal-title">10-Band Studio Graphic Equalizer</h3>
+        <button class="modal-close-btn" id="btn-close-eq">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="eq-presets-row">
+          <button class="eq-preset-btn active" data-preset="Flat">Flat</button>
+          <button class="eq-preset-btn" data-preset="Bass Boost">Bass Boost</button>
+          <button class="eq-preset-btn" data-preset="Treble Boost">Treble Boost</button>
+          <button class="eq-preset-btn" data-preset="Vocal">Vocal</button>
+          <button class="eq-preset-btn" data-preset="Electronic">Electronic</button>
+          <button class="eq-preset-btn" data-preset="Rock">Rock</button>
+          <button class="eq-preset-btn" data-preset="Pop">Pop</button>
+          <button class="eq-preset-btn" data-preset="Lo-Fi">Lo-Fi</button>
+        </div>
+        <div class="eq-sliders-grid" id="eq-sliders-grid">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Queue Drawer -->
+  <aside class="queue-panel" id="queue-panel">
+    <div class="queue-header">
+      <h3 style="font-size: 1rem; font-weight: 700;">Playing Queue</h3>
+      <div style="display: flex; gap: 8px; align-items: center;">
+        <button class="pill-btn" id="btn-clear-queue" style="padding: 4px 10px; font-size: 0.75rem;">Clear</button>
+        <button class="modal-close-btn" id="btn-close-queue">&times;</button>
+      </div>
+    </div>
+    <div class="queue-list" id="queue-items-list">
+      <!-- Populated by JS -->
+    </div>
+  </aside>
+
+  <!-- Sleep Timer Modal -->
+  <div class="modal-backdrop" id="sleep-modal">
+    <div class="modal-window" style="max-width: 380px;">
+      <div class="modal-header">
+        <h3 class="modal-title">Sleep Timer</h3>
+        <button class="modal-close-btn" id="btn-close-sleep">&times;</button>
+      </div>
+      <div class="modal-body" style="display: flex; flex-direction: column; gap: 10px;">
+        <button class="pill-btn sleep-opt-btn" data-mins="15">15 Minutes</button>
+        <button class="pill-btn sleep-opt-btn" data-mins="30">30 Minutes</button>
+        <button class="pill-btn sleep-opt-btn" data-mins="45">45 Minutes</button>
+        <button class="pill-btn sleep-opt-btn" data-mins="60">1 Hour</button>
+        <button class="pill-btn sleep-opt-btn" data-mins="end_of_track">End of Current Track</button>
+        <button class="pill-btn sleep-opt-btn" data-mins="cancel" style="color: #ef4444; border-color: rgba(239, 68, 68, 0.3);">Turn Off Timer</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom Stream Modal -->
+  <div class="modal-backdrop" id="custom-stream-modal">
+    <div class="modal-window">
+      <div class="modal-header">
+        <h3 class="modal-title">Play Direct Stream URL</h3>
+        <button class="modal-close-btn" id="btn-close-custom-stream">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="custom-stream-form">
+          <div class="form-group">
+            <label class="form-label" for="stream-url-input">Stream / Audio File URL (MP3, AAC, M3U8)</label>
+            <input type="url" class="form-input" id="stream-url-input" placeholder="https://example.com/stream.mp3" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="stream-title-input">Track / Stream Title (Optional)</label>
+            <input type="text" class="form-input" id="stream-title-input" placeholder="My Stream">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="stream-artist-input">Artist / Station Name (Optional)</label>
+            <input type="text" class="form-input" id="stream-artist-input" placeholder="Direct Audio">
+          </div>
+          <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 10px;">
+            Start Stream
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Drag-and-drop local audio files overlay -->
+  <div class="drop-overlay" id="drop-overlay">
+    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+    <h2>Drop Audio Files Here</h2>
+    <p>MP3, FLAC, WAV, AAC supported</p>
+  </div>
+
+  <!-- Application Script -->
+  <script src="js/bundle.js"></script>
+</body>
+</html>
